@@ -9,10 +9,20 @@
   <% include ../includes/nav.ejs %>
     <div class="jumbotron text-center">
       <div class="container">
-        <h1>
-          <%= title %>
-        </h1>
-        <p>This is the placeholder for Team Activity 03</p>
+        <h1><%= title %></h1>
+        <h2><% for(let product of products) { %> </h2>
+        <div class="card">
+          <div class="card-body">
+            <h2><%= product.name %></h2>
+            <img src="<%= product.imageUrl %>" alt="<% product.name %>" />
+            <p><%= products.description %></p>
+            <h3><%= products.pricfe %></h3>
+            <% for left tag of product.tags) { %>
+            <span><%= tag %></span>
+            <% } %>
+          </div>
+        </div>
+        <% } %>
       </div>
     </div>
     <div class="container">
